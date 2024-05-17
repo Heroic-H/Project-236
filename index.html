@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var html
+        $(document).ready(function(){
+            $.ajax({
+                url:"https://networking-ecommerce-new.onrender.com/profile?id=1",
+                success:function(data){
+                    html=data
+                    displayHtml()
+                }
+            })
+        })
+        function displayHtml(){$("body").append(html)}
+    </script>
+</body>
+</html>
